@@ -26,12 +26,12 @@ extern Servo wrist_rot;
 extern Servo wrist_ver;
 extern Servo gripper;
 
-extern int step_base = 0;
-extern int step_shoulder = 45;
-extern int step_elbow = 180;
-extern int step_wrist_rot = 180;
-extern int step_wrist_ver = 90;
-extern int step_gripper = 10;
+int step_base = 0;
+int step_shoulder = 45;
+int step_elbow = 180;
+int step_wrist_rot = 180;
+int step_wrist_ver = 90;
+int step_gripper = 10;
  
 
 _Braccio Braccio;
