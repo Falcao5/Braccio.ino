@@ -169,14 +169,13 @@ char readSerialData()
     return result;
 }
 
-//buchedessantimà ghelellelle addessellemmaccumascedde
 /**
  * degrees: the variable i want to modify
  * bound:   the max/min limit
  * incDec:  if 0 increases degrees in a range between the bound range
  *          if 1 decreases degrees in a range between the bound range
 */
-void alimu(int *degrees, int bound, int incDec)
+void move(int *degrees, int bound, int incDec)
 {
 
     if(incDec == 0)
@@ -230,67 +229,67 @@ void loop()
     /* M1 */
     if(c == BASE_KEY_INC)
     {
-        alimu(&base_deg, BASE_MAX_DEG, 0);
+        move(&base_deg, BASE_MAX_DEG, 0);
     }
 
     if(c == BASE_KEY_DEC)
     {
-        alimu(&base_deg, BASE_MIN_DEG, 1);
+        move(&base_deg, BASE_MIN_DEG, 1);
     }
 
     /* M2 */
     if(c == SHOULDER_KEY_INC)
     {
-        alimu(&shoulder_deg, SHOULDER_MAX_DEG, 0);
+        move(&shoulder_deg, SHOULDER_MAX_DEG, 0);
     }
 
     if(c == SHOULDER_KEY_DEC)
     {
-        alimu(&shoulder_deg, SHOULDER_MIN_DEG, 1);
+        move(&shoulder_deg, SHOULDER_MIN_DEG, 1);
     }
 
     /* M3 */
     if(c == ELBOW_KEY_INC)
     {
-        alimu(&elbow_deg, ELBOW_MAX_DEG, 0);
+        move(&elbow_deg, ELBOW_MAX_DEG, 0);
     }
 
     if(c == ELBOW_KEY_DEC)
     {
-        alimu(&elbow_deg, ELBOW_MIN_DEG, 1);
+        move(&elbow_deg, ELBOW_MIN_DEG, 1);
     }
 
     /* M4 */
     if(c == WRIST_ROT_KEY_INC)
     {
-        alimu(&wrist_rot_deg, WRIST_ROT_MAX_DEG, 0);
+        move(&wrist_rot_deg, WRIST_ROT_MAX_DEG, 0);
     }
 
     if(c == WRIST_ROT_KEY_DEC)
     {
-        alimu(&wrist_rot_deg, WRIST_ROT_MIN_DEG, 1);
+        move(&wrist_rot_deg, WRIST_ROT_MIN_DEG, 1);
     }
 
     /* M5 */
     if(c == WRIST_VER_KEY_INC)
     {
-        alimu(&wrist_ver_deg, WRIST_VER_MAX_DEG, 0);
+        move(&wrist_ver_deg, WRIST_VER_MAX_DEG, 0);
     }
 
     if(c == WRIST_VER_KEY_DEC)
     {
-        alimu(&wrist_ver_deg, WRIST_VER_MIN_DEG, 1);
+        move(&wrist_ver_deg, WRIST_VER_MIN_DEG, 1);
     }
 
     /* M6 */
     if(c == GRIPPER_KEY_INC)
     {
-        alimu(&gripper_deg, GRIPPER_MAX_DEG, 0);
+        move(&gripper_deg, GRIPPER_MAX_DEG, 0);
     }
 
     if(c == GRIPPER_KEY_DEC)
     {
-        alimu(&gripper_deg, GRIPPER_MIN_DEG, 1);
+        move(&gripper_deg, GRIPPER_MIN_DEG, 1);
     }
 
     /* WRITE INFORMATION ABOUT SERVOS DEGREES */
